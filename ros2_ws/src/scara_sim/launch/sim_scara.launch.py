@@ -6,6 +6,9 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch.event_handlers import OnProcessExit
 import xacro
+from launch.actions import IncludeLaunchDescription, RegisterEventHandler, SetEnvironmentVariable
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.event_handlers import OnProcessExit
 
 def generate_launch_description():
 	pkg_name = 'scara_description'
@@ -85,45 +88,59 @@ def generate_launch_description():
 	output='screen'
 	)
 
-	joint_state_broadcaster_spawner = Node(
-	package='controller_manager',
-	executable='spawner',
-	arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
-	)
+	# joint_state_broadcaster_spawner = Node(
+	# package='controller_manager',
+	# executable='spawner',
+	# arguments=['joint_state_broadcaster', '--controller-manager', '/controller_manager'],
+	# )
 
-	scara_controller_spawner = Node(
-	package='controller_manager',
-	executable='spawner',
-	arguments=['scara_controller', '--controller-manager', '/controller_manager'],
+	# scara_controller_spawner = Node(
+	# package='controller_manager',
+	# executable='spawner',
+	# arguments=['scara_controller', '--controller-manager', '/controller_manager'],
+	# )
+	# gripper_controller_spawner = Node(
+	#     package='controller_manager',
+	#     executable='spawner',
+	#     arguments=['gripper_controller', '--controller-manager', '/controller_manager'],
+	# )
+	controllers_launch = IncludeLaunchDescription(
+		PythonLaunchDescriptionSource(
+			os.path.join(
+				get_package_share_directory('scara_control'),
+				'launch',
+				'controllers.launch.py'
+			)
+		)
 	)
-	gripper_controller_spawner = Node(
-	    package='controller_manager',
-	    executable='spawner',
-	    arguments=['gripper_controller', '--controller-manager', '/controller_manager'],
-	)
-
 	return LaunchDescription([
-	gz_resource_path,
-	gz_sim,
-	node_robot_state_publisher,
-	spawn_entity,
-	bridge,
-	RegisterEventHandler(
-	    event_handler=OnProcessExit(
-		target_action=spawn_entity,
-		on_exit=[joint_state_broadcaster_spawner],
-	    )
-	),
-	RegisterEventHandler(
-	    event_handler=OnProcessExit(
-		target_action=joint_state_broadcaster_spawner,
-		on_exit=[scara_controller_spawner],
-	    )
-	),
-	RegisterEventHandler(
-	    event_handler=OnProcessExit(
-		target_action=joint_state_broadcaster_spawner,
-		on_exit=[gripper_controller_spawner],
-	    )
-	),
+		gz_resource_path,
+		gz_sim,
+		node_robot_state_publisher,
+		spawn_entity,
+		bridge,
+		# RegisterEventHandler(
+		# 	event_handler=OnProcessExit(
+		# 	target_action=spawn_entity,
+		# 	on_exit=[joint_state_broadcaster_spawner],
+		# 	)
+		# ),
+		# RegisterEventHandler(
+		# 	event_handler=OnProcessExit(
+		# 	target_action=joint_state_broadcaster_spawner,
+		# 	on_exit=[scara_controller_spawner],
+		# 	)
+		# ),
+		# RegisterEventHandler(
+		# 	event_handler=OnProcessExit(
+		# 	target_action=joint_state_broadcaster_spawner,
+		# 	on_exit=[gripper_controller_spawner],
+		# 	)
+		# ),
+		RegisterEventHandler(
+			event_handler=OnProcessExit(
+				target_action=spawn_entity,
+				on_exit=[controllers_launch],
+			)
+		),
 	])

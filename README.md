@@ -1,4 +1,12 @@
-# Scara_arm_CNC
-<img width="1044" height="823" alt="image" src="https://github.com/user-attachments/assets/a64f01ba-31fb-4b93-bb9b-b080faad517f" />
+## Запуск симуляции
 
-# Scara_CNC
+```bash
+git clone https://github.com/Pan-koplan/Scara_CNC.git
+cd Scara_CNC/ros2_ws
+
+source /opt/ros/jazzy/setup.bash
+colcon build
+source install/setup.bash
+
+ros2 launch scara_bringup bringup.launch.py
+```
