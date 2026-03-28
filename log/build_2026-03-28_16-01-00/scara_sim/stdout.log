@@ -1,0 +1,45 @@
+running egg_info
+creating ../../../build/scara_sim/scara_sim.egg-info
+writing ../../../build/scara_sim/scara_sim.egg-info/PKG-INFO
+writing dependency_links to ../../../build/scara_sim/scara_sim.egg-info/dependency_links.txt
+writing requirements to ../../../build/scara_sim/scara_sim.egg-info/requires.txt
+writing top-level names to ../../../build/scara_sim/scara_sim.egg-info/top_level.txt
+writing manifest file '../../../build/scara_sim/scara_sim.egg-info/SOURCES.txt'
+reading manifest file '../../../build/scara_sim/scara_sim.egg-info/SOURCES.txt'
+writing manifest file '../../../build/scara_sim/scara_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/spoonge/Projects/Scara_arm_CNC/build/scara_sim/build
+creating /home/spoonge/Projects/Scara_arm_CNC/build/scara_sim/build/lib
+creating /home/spoonge/Projects/Scara_arm_CNC/build/scara_sim/build/lib/scara_sim
+copying scara_sim/__init__.py -> /home/spoonge/Projects/Scara_arm_CNC/build/scara_sim/build/lib/scara_sim
+running install
+running install_lib
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/lib/python3.12/site-packages/scara_sim
+copying /home/spoonge/Projects/Scara_arm_CNC/build/scara_sim/build/lib/scara_sim/__init__.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/lib/python3.12/site-packages/scara_sim
+byte-compiling /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/lib/python3.12/site-packages/scara_sim/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/ament_index
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/ament_index/resource_index
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/ament_index/resource_index/packages
+copying resource/scara_sim -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/ament_index/resource_index/packages
+copying package.xml -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/launch
+copying launch/sim_scara.launch.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/launch
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/worlds
+copying worlds/lab.sdf -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/worlds
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/table
+copying worlds/table/model.sdf -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/table
+copying worlds/table/model.config -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/table
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/table/meshes
+copying worlds/table/meshes/table.stl -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/table/meshes
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/detail
+copying worlds/detail/model.sdf -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/detail
+copying worlds/detail/model.config -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/detail
+creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/detail/meshes
+copying worlds/detail/meshes/detail.stl -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/share/scara_sim/models/detail/meshes
+running install_egg_info
+Copying ../../../build/scara_sim/scara_sim.egg-info to /home/spoonge/Projects/Scara_arm_CNC/install/scara_sim/lib/python3.12/site-packages/scara_sim-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/spoonge/Projects/Scara_arm_CNC/build/scara_sim/install.log'

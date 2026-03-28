@@ -1,0 +1,53 @@
+[1.712s] Invoking command in '/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/src/scara_application': AMENT_PREFIX_PATH=/home/spoonge/Projects/Scara_arm_CNC/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spoonge/Projects/Scara_arm_CNC/install/scara_description:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/spoonge/Projects/Scara_arm_CNC/build/scara_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/scara_application build --build-base /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build install --record /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/install.log --single-version-externally-managed install_data
+[2.056s] running egg_info
+[2.056s] creating ../../../build/scara_application/scara_application.egg-info
+[2.088s] writing ../../../build/scara_application/scara_application.egg-info/PKG-INFO
+[2.088s] writing dependency_links to ../../../build/scara_application/scara_application.egg-info/dependency_links.txt
+[2.089s] writing entry points to ../../../build/scara_application/scara_application.egg-info/entry_points.txt
+[2.089s] writing requirements to ../../../build/scara_application/scara_application.egg-info/requires.txt
+[2.089s] writing top-level names to ../../../build/scara_application/scara_application.egg-info/top_level.txt
+[2.089s] writing manifest file '../../../build/scara_application/scara_application.egg-info/SOURCES.txt'
+[2.164s] reading manifest file '../../../build/scara_application/scara_application.egg-info/SOURCES.txt'
+[2.165s] writing manifest file '../../../build/scara_application/scara_application.egg-info/SOURCES.txt'
+[2.165s] running build
+[2.165s] running build_py
+[2.165s] creating /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build
+[2.165s] creating /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib
+[2.166s] creating /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application
+[2.166s] copying scara_application/test_cnc_coop.py -> /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application
+[2.166s] copying scara_application/web_goal_listener.py -> /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application
+[2.166s] copying scara_application/test_4_points.py -> /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application
+[2.166s] copying scara_application/MoveIT_cnc_coop.py -> /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application
+[2.166s] copying scara_application/part_4_points.py -> /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application
+[2.166s] copying scara_application/__init__.py -> /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application
+[2.166s] running install
+[2.173s] running install_lib
+[2.206s] creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application
+[2.206s] copying /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application/test_cnc_coop.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application
+[2.206s] copying /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application/web_goal_listener.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application
+[2.206s] copying /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application/test_4_points.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application
+[2.206s] copying /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application/MoveIT_cnc_coop.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application
+[2.207s] copying /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application/part_4_points.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application
+[2.207s] copying /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build/lib/scara_application/__init__.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application
+[2.207s] byte-compiling /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application/test_cnc_coop.py to test_cnc_coop.cpython-312.pyc
+[2.208s] byte-compiling /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application/web_goal_listener.py to web_goal_listener.cpython-312.pyc
+[2.208s] byte-compiling /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application/test_4_points.py to test_4_points.cpython-312.pyc
+[2.209s] byte-compiling /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application/MoveIT_cnc_coop.py to MoveIT_cnc_coop.cpython-312.pyc
+[2.211s] byte-compiling /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application/part_4_points.py to part_4_points.cpython-312.pyc
+[2.211s] byte-compiling /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application/__init__.py to __init__.cpython-312.pyc
+[2.212s] running install_data
+[2.212s] creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/share/ament_index
+[2.212s] creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/share/ament_index/resource_index
+[2.212s] creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/share/ament_index/resource_index/packages
+[2.212s] copying resource/scara_application -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/share/ament_index/resource_index/packages
+[2.212s] copying package.xml -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/share/scara_application
+[2.213s] creating /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/share/scara_application/launch
+[2.213s] copying launch/all_system.launch.py -> /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/share/scara_application/launch
+[2.213s] running install_egg_info
+[2.246s] Copying ../../../build/scara_application/scara_application.egg-info to /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages/scara_application-0.0.0-py3.12.egg-info
+[2.247s] running install_scripts
+[2.444s] Installing MoveIT_cnc_coop script to /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/scara_application
+[2.445s] Installing part_4_points script to /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/scara_application
+[2.445s] Installing simple_mover script to /home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/scara_application
+[2.445s] writing list of installed files to '/home/spoonge/Projects/Scara_arm_CNC/build/scara_application/install.log'
+[2.491s] Invoked command in '/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/src/scara_application' returned '0': AMENT_PREFIX_PATH=/home/spoonge/Projects/Scara_arm_CNC/install/scara_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spoonge/Projects/Scara_arm_CNC/install/scara_description:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/spoonge/Projects/Scara_arm_CNC/build/scara_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/spoonge/Projects/Scara_arm_CNC/install/scara_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/scara_application build --build-base /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/build install --record /home/spoonge/Projects/Scara_arm_CNC/build/scara_application/install.log --single-version-externally-managed install_data

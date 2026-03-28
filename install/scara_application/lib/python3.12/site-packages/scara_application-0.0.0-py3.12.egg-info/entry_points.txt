@@ -1,0 +1,4 @@
+[console_scripts]
+MoveIT_cnc_coop = scara_application.MoveIT_cnc_coop:main
+part_4_points = scara_application.part_4_points:main
+simple_mover = scara_application.simple_mover:main

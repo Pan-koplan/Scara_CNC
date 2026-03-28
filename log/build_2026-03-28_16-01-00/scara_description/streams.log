@@ -1,0 +1,72 @@
+[0.042s] Invoking command in '/home/spoonge/Projects/Scara_arm_CNC/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_sim:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_application:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_bringup:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/Projects/Scara_arm_CNC/ros2_ws/src/scara_description -DCMAKE_INSTALL_PREFIX=/home/spoonge/Projects/Scara_arm_CNC/install/scara_description
+[0.616s] -- The C compiler identification is GNU 13.3.0
+[0.616s] -- The CXX compiler identification is GNU 13.3.0
+[0.616s] -- Detecting C compiler ABI info
+[0.616s] -- Detecting C compiler ABI info - done
+[0.616s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.617s] -- Detecting C compile features
+[0.617s] -- Detecting C compile features - done
+[0.617s] -- Detecting CXX compiler ABI info
+[0.724s] -- Detecting CXX compiler ABI info - done
+[0.739s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.739s] -- Detecting CXX compile features
+[0.740s] -- Detecting CXX compile features - done
+[0.762s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.007s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.227s] -- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)
+[1.354s] -- Configuring done (1.3s)
+[1.359s] -- Generating done (0.0s)
+[1.362s] -- Build files have been written to: /home/spoonge/Projects/Scara_arm_CNC/build/scara_description
+[1.370s] Invoked command in '/home/spoonge/Projects/Scara_arm_CNC/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_sim:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_application:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_bringup:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/Projects/Scara_arm_CNC/ros2_ws/src/scara_description -DCMAKE_INSTALL_PREFIX=/home/spoonge/Projects/Scara_arm_CNC/install/scara_description
+[1.371s] Invoking command in '/home/spoonge/Projects/Scara_arm_CNC/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_sim:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_application:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_bringup:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/Projects/Scara_arm_CNC/build/scara_description -- -j12 -l12
+[1.440s] Invoked command in '/home/spoonge/Projects/Scara_arm_CNC/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_sim:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_application:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_bringup:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/Projects/Scara_arm_CNC/build/scara_description -- -j12 -l12
+[1.441s] Invoking command in '/home/spoonge/Projects/Scara_arm_CNC/build/scara_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_sim:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_application:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_bringup:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/Projects/Scara_arm_CNC/build/scara_description
+[1.454s] -- Install configuration: ""
+[1.454s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes
+[1.455s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/finger2.STL
+[1.456s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/finger4.STL
+[1.457s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/finger3.STL
+[1.458s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/hand1.STL
+[1.459s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/hand2.STL
+[1.460s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/base_link.STL
+[1.461s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/gripper_base.STL
+[1.489s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/meshes/hand3.STL
+[1.492s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/urdf
+[1.493s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/urdf/scara.urdf
+[1.493s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/urdf/scara.xacro
+[1.493s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/urdf/gripper.xacro
+[1.493s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/urdf/urdf_Scara.csv
+[1.493s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/config
+[1.493s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/config/controllers.yaml
+[1.494s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/config/joint_names_urdf_Scara.yaml
+[1.494s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/config/scara.rviz
+[1.494s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/config/scara_rsp.yaml
+[1.494s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/worlds
+[1.495s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/worlds/lab.sdf
+[1.495s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models
+[1.496s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/table
+[1.496s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/table/meshes
+[1.496s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/table/meshes/table.stl
+[1.499s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/table/model.sdf
+[1.500s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/table/model.config
+[1.500s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/detail
+[1.501s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/detail/meshes
+[1.501s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/detail/meshes/detail.stl
+[1.504s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/detail/model.sdf
+[1.505s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/models/detail/model.config
+[1.506s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/ament_index/resource_index/package_run_dependencies/scara_description
+[1.506s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/ament_index/resource_index/parent_prefix_path/scara_description
+[1.506s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/environment/ament_prefix_path.sh
+[1.506s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/environment/ament_prefix_path.dsv
+[1.507s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/environment/path.sh
+[1.507s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/environment/path.dsv
+[1.507s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/local_setup.bash
+[1.507s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/local_setup.sh
+[1.507s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/local_setup.zsh
+[1.507s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/local_setup.dsv
+[1.508s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/package.dsv
+[1.508s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/ament_index/resource_index/packages/scara_description
+[1.509s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/cmake/scara_descriptionConfig.cmake
+[1.509s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/cmake/scara_descriptionConfig-version.cmake
+[1.509s] -- Installing: /home/spoonge/Projects/Scara_arm_CNC/install/scara_description/share/scara_description/package.xml
+[1.518s] Invoked command in '/home/spoonge/Projects/Scara_arm_CNC/build/scara_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_sim:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_application:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/scara_bringup:/home/spoonge/Projects/Scara_arm_CNC/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/Projects/Scara_arm_CNC/build/scara_description

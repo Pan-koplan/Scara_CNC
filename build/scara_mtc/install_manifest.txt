@@ -1,0 +1,16 @@
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/lib/scara_mtc/mtc_node
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/ament_index/resource_index/package_run_dependencies/scara_mtc
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/ament_index/resource_index/parent_prefix_path/scara_mtc
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/environment/ament_prefix_path.sh
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/environment/ament_prefix_path.dsv
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/environment/path.sh
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/environment/path.dsv
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/local_setup.bash
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/local_setup.sh
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/local_setup.zsh
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/local_setup.dsv
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/package.dsv
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/ament_index/resource_index/packages/scara_mtc
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/cmake/scara_mtcConfig.cmake
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/cmake/scara_mtcConfig-version.cmake
+/home/spoonge/Projects/Scara_arm_CNC/install/scara_mtc/share/scara_mtc/package.xml

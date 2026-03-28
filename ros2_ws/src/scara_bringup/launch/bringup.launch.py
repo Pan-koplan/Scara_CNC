@@ -67,24 +67,6 @@ def generate_launch_description():
         }.items()
     )
 
-    # ---------- Include: Controllers ----------
-    controllers_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            PathJoinSubstitution([
-                FindPackageShare("scara_control"),
-                "launch",
-                "controllers.launch.py"
-            ])
-        ),
-        condition=IfCondition(LaunchConfiguration("spawn_controllers")),
-    )
-    
-
-    controllers_launch_delayed = TimerAction(
-        period=controllers_delay,
-        actions=[controllers_launch],
-    )
-
     # ---------- Include: MoveIt ----------
     moveit_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -161,7 +143,6 @@ def generate_launch_description():
     return LaunchDescription(
         declare_args + [
             sim_launch,
-            controllers_launch_delayed,
             moveit_launch_delayed,
             mtc_node_delayed,  
             app_launch_delayed,

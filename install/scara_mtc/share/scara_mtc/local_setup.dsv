@@ -1,0 +1,2 @@
+source;share/scara_mtc/environment/ament_prefix_path.sh
+source;share/scara_mtc/environment/path.sh
