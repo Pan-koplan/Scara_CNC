@@ -1,0 +1,22 @@
+[1.393s] Invoking command in '/home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup/build --no-deps symlink_data
+[1.831s] running develop
+[2.159s] running egg_info
+[2.159s] creating scara_bringup.egg-info
+[2.188s] writing scara_bringup.egg-info/PKG-INFO
+[2.189s] writing dependency_links to scara_bringup.egg-info/dependency_links.txt
+[2.189s] writing requirements to scara_bringup.egg-info/requires.txt
+[2.189s] writing top-level names to scara_bringup.egg-info/top_level.txt
+[2.189s] writing manifest file 'scara_bringup.egg-info/SOURCES.txt'
+[2.249s] reading manifest file 'scara_bringup.egg-info/SOURCES.txt'
+[2.250s] writing manifest file 'scara_bringup.egg-info/SOURCES.txt'
+[2.281s] running build_ext
+[2.281s] Creating /home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/lib/python3.12/site-packages/scara-bringup.egg-link (link to .)
+[2.282s] 
+[2.282s] Installed /home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup
+[2.282s] running symlink_data
+[2.282s] creating /home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/share/ament_index
+[2.282s] creating /home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/share/ament_index/resource_index
+[2.282s] creating /home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/share/ament_index/resource_index/packages
+[2.282s] symbolically linking /home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup/resource/scara_bringup -> /home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/share/ament_index/resource_index/packages
+[2.282s] symbolically linking /home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup/package.xml -> /home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/share/scara_bringup
+[2.344s] Invoked command in '/home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/spoonge/ros2_ws/src/scara_bringup/build/scara_bringup/build --no-deps symlink_data

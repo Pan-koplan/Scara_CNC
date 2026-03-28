@@ -1,0 +1,65 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)
+-- Configuring done (1.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/spoonge/ros2_ws/src/build/scara_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/build/.built_by
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/build/COLCON_IGNORE
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/.colcon_install_layout
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/COLCON_IGNORE
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/_local_setup_util_ps1.py
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/_local_setup_util_sh.py
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/local_setup.bash
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/local_setup.ps1
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/local_setup.sh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/local_setup.zsh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/setup.bash
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/setup.ps1
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/setup.sh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/install/setup.zsh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/COLCON_IGNORE
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/build_2025-11-16_11-24-53/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/build_2025-11-16_11-24-53/logger_all.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/build_2025-11-16_11-28-44/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/build_2025-11-16_11-28-44/logger_all.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/latest/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/latest/logger_all.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/latest_build/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/log/latest_build/logger_all.log
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/scara.urdf
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/urdf/urdf_Scara.csv
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/meshes/base_link.STL
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/meshes/hand1.STL
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/meshes/hand2.STL
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/meshes/hand3.STL
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/ament_index/resource_index/package_run_dependencies/scara_description
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/ament_index/resource_index/parent_prefix_path/scara_description
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/environment/path.sh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/environment/path.dsv
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/local_setup.bash
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/local_setup.sh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/local_setup.zsh
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/local_setup.dsv
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/package.dsv
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/ament_index/resource_index/packages/scara_description
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/cmake/scara_descriptionConfig.cmake
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/cmake/scara_descriptionConfig-version.cmake
+-- Symlinking: /home/spoonge/ros2_ws/src/install/scara_description/share/scara_description/package.xml

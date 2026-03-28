@@ -1,0 +1,1 @@
+/home/spoonge/ros2_ws/src/scara_cnc/launch/sim_scara.launch.py

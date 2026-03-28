@@ -1,0 +1,11 @@
+package.xml
+setup.cfg
+setup.py
+resource/scara_bringup
+scara_bringup/__init__.py
+scara_bringup.egg-info/PKG-INFO
+scara_bringup.egg-info/SOURCES.txt
+scara_bringup.egg-info/dependency_links.txt
+scara_bringup.egg-info/requires.txt
+scara_bringup.egg-info/top_level.txt
+scara_bringup.egg-info/zip-safe

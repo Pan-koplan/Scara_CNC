@@ -1,0 +1,19 @@
+[0.031s] Invoking command in '/home/spoonge/ros2_ws/src/build/scara_moveit_config': AMENT_PREFIX_PATH=/home/spoonge/ros2_ws/src/install/scara_cnc:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spoonge/ros2_ws/src/install/scara_cnc:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/ros2_ws/src/scara_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/spoonge/ros2_ws/src/install/scara_moveit_config
+[0.193s] -- The C compiler identification is GNU 13.3.0
+[0.361s] -- The CXX compiler identification is GNU 13.3.0
+[0.409s] -- Detecting C compiler ABI info
+[0.747s] -- Detecting C compiler ABI info - done
+[0.802s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.802s] -- Detecting C compile features
+[0.803s] -- Detecting C compile features - done
+[0.853s] -- Detecting CXX compiler ABI info
+[1.273s] -- Detecting CXX compiler ABI info - done
+[1.318s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.321s] -- Detecting CXX compile features
+[1.323s] -- Detecting CXX compile features - done
+[1.342s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.807s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.011s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.368s] -- Configuring done (2.3s)
+[2.374s] -- Generating done (0.0s)
+[2.377s] -- Build files have been written to: /home/spoonge/ros2_ws/src/build/scara_moveit_config

@@ -1,0 +1,87 @@
+[0.000000] (-) TimerEvent: {}
+[0.000348] (turtlebot_nav_tasks) JobQueued: {'identifier': 'turtlebot_nav_tasks', 'dependencies': OrderedDict()}
+[0.000912] (turtlebot_nav_tasks) JobStarted: {'identifier': 'turtlebot_nav_tasks'}
+[0.099122] (-) TimerEvent: {}
+[0.199567] (-) TimerEvent: {}
+[0.300192] (-) TimerEvent: {}
+[0.400958] (-) TimerEvent: {}
+[0.501359] (-) TimerEvent: {}
+[0.602306] (-) TimerEvent: {}
+[0.702830] (-) TimerEvent: {}
+[0.806560] (-) TimerEvent: {}
+[0.907191] (-) TimerEvent: {}
+[1.007581] (-) TimerEvent: {}
+[1.108074] (-) TimerEvent: {}
+[1.210004] (-) TimerEvent: {}
+[1.318281] (-) TimerEvent: {}
+[1.422412] (-) TimerEvent: {}
+[1.522896] (-) TimerEvent: {}
+[1.623383] (-) TimerEvent: {}
+[1.726204] (-) TimerEvent: {}
+[1.831031] (-) TimerEvent: {}
+[1.931404] (-) TimerEvent: {}
+[2.035951] (-) TimerEvent: {}
+[2.136934] (-) TimerEvent: {}
+[2.237592] (-) TimerEvent: {}
+[2.338492] (-) TimerEvent: {}
+[2.441975] (-) TimerEvent: {}
+[2.542538] (-) TimerEvent: {}
+[2.642898] (-) TimerEvent: {}
+[2.743217] (-) TimerEvent: {}
+[2.816092] (turtlebot_nav_tasks) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', 'build/turtlebot_nav_tasks', 'build', '--build-base', '/home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/build', 'install', '--record', '/home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/spoonge/ros2_ws/src/turtlebot_nav_tasks', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'd333a675f8ef', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'dialog', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GZ_VERSION': 'harmonic', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks', 'TURTLEBOT3_MODEL': 'burger', 'PYTHONPATH': '/home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'TZ': 'Europe/Moscow', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[2.846935] (-) TimerEvent: {}
+[2.947359] (-) TimerEvent: {}
+[3.047827] (-) TimerEvent: {}
+[3.148347] (-) TimerEvent: {}
+[3.249171] (-) TimerEvent: {}
+[3.349743] (-) TimerEvent: {}
+[3.436931] (turtlebot_nav_tasks) StdoutLine: {'line': b'running egg_info\n'}
+[3.451214] (-) TimerEvent: {}
+[3.478009] (turtlebot_nav_tasks) StdoutLine: {'line': b'writing build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info/PKG-INFO\n'}
+[3.484022] (turtlebot_nav_tasks) StdoutLine: {'line': b'writing dependency_links to build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info/dependency_links.txt\n'}
+[3.484393] (turtlebot_nav_tasks) StdoutLine: {'line': b'writing entry points to build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info/entry_points.txt\n'}
+[3.487897] (turtlebot_nav_tasks) StdoutLine: {'line': b'writing requirements to build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info/requires.txt\n'}
+[3.488189] (turtlebot_nav_tasks) StdoutLine: {'line': b'writing top-level names to build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info/top_level.txt\n'}
+[3.551780] (-) TimerEvent: {}
+[3.584302] (turtlebot_nav_tasks) StdoutLine: {'line': b"reading manifest file 'build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info/SOURCES.txt'\n"}
+[3.586993] (turtlebot_nav_tasks) StdoutLine: {'line': b"writing manifest file 'build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info/SOURCES.txt'\n"}
+[3.588127] (turtlebot_nav_tasks) StdoutLine: {'line': b'running build\n'}
+[3.588373] (turtlebot_nav_tasks) StdoutLine: {'line': b'running build_py\n'}
+[3.593204] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying turtlebot_nav_tasks/nav_aruco_optimal.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/build/lib/turtlebot_nav_tasks\n'}
+[3.594315] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying turtlebot_nav_tasks/aruco_detector_node.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/build/lib/turtlebot_nav_tasks\n'}
+[3.595661] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying turtlebot_nav_tasks/nav_aruco_to_id.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/build/lib/turtlebot_nav_tasks\n'}
+[3.596406] (turtlebot_nav_tasks) StdoutLine: {'line': b'running install\n'}
+[3.610806] (turtlebot_nav_tasks) StdoutLine: {'line': b'running install_lib\n'}
+[3.656231] (-) TimerEvent: {}
+[3.659894] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/build/lib/turtlebot_nav_tasks/nav_aruco_optimal.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks\n'}
+[3.660129] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/build/lib/turtlebot_nav_tasks/aruco_detector_node.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks\n'}
+[3.660494] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/build/lib/turtlebot_nav_tasks/nav_aruco_to_id.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks\n'}
+[3.661871] (turtlebot_nav_tasks) StdoutLine: {'line': b'byte-compiling /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks/nav_aruco_optimal.py to nav_aruco_optimal.cpython-312.pyc\n'}
+[3.665644] (turtlebot_nav_tasks) StdoutLine: {'line': b'byte-compiling /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks/aruco_detector_node.py to aruco_detector_node.cpython-312.pyc\n'}
+[3.672526] (turtlebot_nav_tasks) StdoutLine: {'line': b'byte-compiling /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks/nav_aruco_to_id.py to nav_aruco_to_id.cpython-312.pyc\n'}
+[3.677938] (turtlebot_nav_tasks) StdoutLine: {'line': b'running install_data\n'}
+[3.679826] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying package.xml -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/share/turtlebot_nav_tasks\n'}
+[3.681700] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying launch/nav_base.launch.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/share/turtlebot_nav_tasks/launch\n'}
+[3.682352] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying launch/nav_optimal_four_demo.launch.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/share/turtlebot_nav_tasks/launch\n'}
+[3.684346] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying launch/aruco_nav_test.launch.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/share/turtlebot_nav_tasks/launch\n'}
+[3.684850] (turtlebot_nav_tasks) StdoutLine: {'line': b'copying launch/nav_three_points_demo.launch.py -> /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/share/turtlebot_nav_tasks/launch\n'}
+[3.685400] (turtlebot_nav_tasks) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.728960] (turtlebot_nav_tasks) StdoutLine: {'line': b"removing '/home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[3.729694] (turtlebot_nav_tasks) StdoutLine: {'line': b'Copying build/turtlebot_nav_tasks/turtlebot_nav_tasks.egg-info to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/python3.12/site-packages/turtlebot_nav_tasks-0.0.0-py3.12.egg-info\n'}
+[3.731622] (turtlebot_nav_tasks) StdoutLine: {'line': b'running install_scripts\n'}
+[3.756981] (-) TimerEvent: {}
+[3.858574] (-) TimerEvent: {}
+[3.958938] (-) TimerEvent: {}
+[4.045211] (turtlebot_nav_tasks) StdoutLine: {'line': b'Installing aruco_detector script to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/turtlebot_nav_tasks\n'}
+[4.045500] (turtlebot_nav_tasks) StdoutLine: {'line': b'Installing aruco_detector_node script to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/turtlebot_nav_tasks\n'}
+[4.045625] (turtlebot_nav_tasks) StdoutLine: {'line': b'Installing aruco_to_id script to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/turtlebot_nav_tasks\n'}
+[4.045927] (turtlebot_nav_tasks) StdoutLine: {'line': b'Installing nav_aruco_optimal script to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/turtlebot_nav_tasks\n'}
+[4.046082] (turtlebot_nav_tasks) StdoutLine: {'line': b'Installing nav_aruco_to_id script to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/turtlebot_nav_tasks\n'}
+[4.046200] (turtlebot_nav_tasks) StdoutLine: {'line': b'Installing nav_optimal_four script to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/turtlebot_nav_tasks\n'}
+[4.046315] (turtlebot_nav_tasks) StdoutLine: {'line': b'Installing nav_three_points script to /home/spoonge/ros2_ws/src/turtlebot_nav_tasks/install/turtlebot_nav_tasks/lib/turtlebot_nav_tasks\n'}
+[4.048235] (turtlebot_nav_tasks) StdoutLine: {'line': b"writing list of installed files to '/home/spoonge/ros2_ws/src/turtlebot_nav_tasks/build/turtlebot_nav_tasks/install.log'\n"}
+[4.059958] (-) TimerEvent: {}
+[4.169523] (-) TimerEvent: {}
+[4.180142] (turtlebot_nav_tasks) CommandEnded: {'returncode': 0}
+[4.224075] (turtlebot_nav_tasks) JobEnded: {'identifier': 'turtlebot_nav_tasks', 'rc': 0}
+[4.228965] (-) EventReactorShutdown: {}

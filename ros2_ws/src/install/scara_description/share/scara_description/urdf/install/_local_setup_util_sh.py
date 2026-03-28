@@ -1,0 +1,1 @@
+/home/spoonge/ros2_ws/src/scara_description/urdf/install/_local_setup_util_sh.py

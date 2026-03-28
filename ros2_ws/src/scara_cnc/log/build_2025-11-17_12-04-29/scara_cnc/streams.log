@@ -1,0 +1,65 @@
+[0.018s] Invoking command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/install/webots_ros2:/home/spoonge/ros2_ws/install/webots_ros2_universal_robot:/home/spoonge/ros2_ws/install/webots_ros2_turtlebot:/home/spoonge/ros2_ws/install/webots_ros2_tiago:/home/spoonge/ros2_ws/install/webots_ros2_tests:/home/spoonge/ros2_ws/install/webots_ros2_tesla:/home/spoonge/ros2_ws/install/webots_ros2_mavic:/home/spoonge/ros2_ws/install/webots_ros2_epuck:/home/spoonge/ros2_ws/install/robo4_project:/home/spoonge/ros2_ws/install/webots_ros2_importer:/home/spoonge/ros2_ws/install/talker:/home/spoonge/ros2_ws/install/my_turtle_controller:/home/spoonge/ros2_ws/install/my_service_server:/home/spoonge/ros2_ws/install/my_service_client:/home/spoonge/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc -- -j12 -l12
+[0.111s] Invoked command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/install/webots_ros2:/home/spoonge/ros2_ws/install/webots_ros2_universal_robot:/home/spoonge/ros2_ws/install/webots_ros2_turtlebot:/home/spoonge/ros2_ws/install/webots_ros2_tiago:/home/spoonge/ros2_ws/install/webots_ros2_tests:/home/spoonge/ros2_ws/install/webots_ros2_tesla:/home/spoonge/ros2_ws/install/webots_ros2_mavic:/home/spoonge/ros2_ws/install/webots_ros2_epuck:/home/spoonge/ros2_ws/install/robo4_project:/home/spoonge/ros2_ws/install/webots_ros2_importer:/home/spoonge/ros2_ws/install/talker:/home/spoonge/ros2_ws/install/my_turtle_controller:/home/spoonge/ros2_ws/install/my_service_server:/home/spoonge/ros2_ws/install/my_service_client:/home/spoonge/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc -- -j12 -l12
+[0.130s] Invoking command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/install/webots_ros2:/home/spoonge/ros2_ws/install/webots_ros2_universal_robot:/home/spoonge/ros2_ws/install/webots_ros2_turtlebot:/home/spoonge/ros2_ws/install/webots_ros2_tiago:/home/spoonge/ros2_ws/install/webots_ros2_tests:/home/spoonge/ros2_ws/install/webots_ros2_tesla:/home/spoonge/ros2_ws/install/webots_ros2_mavic:/home/spoonge/ros2_ws/install/webots_ros2_epuck:/home/spoonge/ros2_ws/install/robo4_project:/home/spoonge/ros2_ws/install/webots_ros2_importer:/home/spoonge/ros2_ws/install/talker:/home/spoonge/ros2_ws/install/my_turtle_controller:/home/spoonge/ros2_ws/install/my_service_server:/home/spoonge/ros2_ws/install/my_service_client:/home/spoonge/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc
+[0.144s] -- Install configuration: ""
+[0.145s] -- Execute custom install script
+[0.146s] [33mCMake Warning (dev) at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:62 (file):
+[0.146s]   Policy CMP0009 is not set: FILE GLOB_RECURSE calls should not follow
+[0.147s]   symlinks by default.  Run "cmake --help-policy CMP0009" for policy details.
+[0.147s]   Use the cmake_policy command to set the policy and suppress this warning.
+[0.147s] Call Stack (most recent call first):
+[0.147s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_directory)
+[0.147s]   cmake_install.cmake:46 (include)
+[0.147s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.147s] [0m
+[0.147s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/build/.built_by
+[0.147s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/build/COLCON_IGNORE
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/.colcon_install_layout
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/COLCON_IGNORE
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/_local_setup_util_ps1.py
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/_local_setup_util_sh.py
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.bash
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.ps1
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.sh
+[0.148s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.zsh
+[0.149s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.bash
+[0.149s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.ps1
+[0.149s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.sh
+[0.149s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.zsh
+[0.149s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/COLCON_IGNORE
+[0.149s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-24-53/events.log
+[0.150s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-24-53/logger_all.log
+[0.150s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-28-44/events.log
+[0.150s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-28-44/logger_all.log
+[0.150s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest/events.log
+[0.150s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest/logger_all.log
+[0.150s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest_build/events.log
+[0.150s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest_build/logger_all.log
+[0.151s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/scara.urdf
+[0.151s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/urdf_Scara.csv
+[0.151s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/base_link.STL
+[0.151s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand1.STL
+[0.151s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand2.STL
+[0.152s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand3.STL
+[0.152s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/launch/display_scara.launch.py
+[0.152s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/launch/sim_scara.launch.py
+[0.152s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/controllers.yaml
+[0.152s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/joint_names_urdf_Scara.yaml
+[0.153s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/scara_cnc.rviz
+[0.153s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/scara_rsp.yaml
+[0.153s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/package_run_dependencies/scara_cnc
+[0.153s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/parent_prefix_path/scara_cnc
+[0.153s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/ament_prefix_path.sh
+[0.154s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/ament_prefix_path.dsv
+[0.154s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/path.sh
+[0.154s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/path.dsv
+[0.154s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.bash
+[0.154s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.sh
+[0.155s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.zsh
+[0.155s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.dsv
+[0.155s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/package.dsv
+[0.172s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/packages/scara_cnc
+[0.172s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/cmake/scara_cncConfig.cmake
+[0.173s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/cmake/scara_cncConfig-version.cmake
+[0.173s] -- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/package.xml
+[0.177s] Invoked command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/install/webots_ros2:/home/spoonge/ros2_ws/install/webots_ros2_universal_robot:/home/spoonge/ros2_ws/install/webots_ros2_turtlebot:/home/spoonge/ros2_ws/install/webots_ros2_tiago:/home/spoonge/ros2_ws/install/webots_ros2_tests:/home/spoonge/ros2_ws/install/webots_ros2_tesla:/home/spoonge/ros2_ws/install/webots_ros2_mavic:/home/spoonge/ros2_ws/install/webots_ros2_epuck:/home/spoonge/ros2_ws/install/robo4_project:/home/spoonge/ros2_ws/install/webots_ros2_importer:/home/spoonge/ros2_ws/install/talker:/home/spoonge/ros2_ws/install/my_turtle_controller:/home/spoonge/ros2_ws/install/my_service_server:/home/spoonge/ros2_ws/install/my_service_client:/home/spoonge/ros2_ws/install/listener:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc

@@ -1,0 +1,8 @@
+[console_scripts]
+aruco_detector = turtlebot_nav_tasks.aruco_detector:main
+aruco_detector_node = turtlebot_nav_tasks.aruco_detector_node:main
+aruco_to_id = turtlebot_nav_tasks.nav_aruco_to_id:main
+nav_aruco_optimal = turtlebot_nav_tasks.nav_aruco_optimal:main
+nav_aruco_to_id = turtlebot_nav_tasks.nav_aruco_to_id:main
+nav_optimal_four = turtlebot_nav_tasks.nav_optimal_four:main
+nav_three_points = turtlebot_nav_tasks.nav_three_points:main

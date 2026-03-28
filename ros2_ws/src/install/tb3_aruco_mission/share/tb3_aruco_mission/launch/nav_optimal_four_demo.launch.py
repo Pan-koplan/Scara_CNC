@@ -1,0 +1,1 @@
+/home/spoonge/ros2_ws/src/build/tb3_aruco_mission/launch/nav_optimal_four_demo.launch.py

@@ -1,0 +1,52 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/build/.built_by
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/build/COLCON_IGNORE
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/.colcon_install_layout
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/COLCON_IGNORE
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/_local_setup_util_ps1.py
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/_local_setup_util_sh.py
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.bash
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.ps1
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.sh
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/local_setup.zsh
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.bash
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.ps1
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.sh
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/install/setup.zsh
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/COLCON_IGNORE
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-24-53/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-24-53/logger_all.log
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-28-44/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/build_2025-11-16_11-28-44/logger_all.log
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest/logger_all.log
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest_build/events.log
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/log/latest_build/logger_all.log
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/scara.urdf
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/urdf_Scara.csv
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/base_link.STL
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand1.STL
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand2.STL
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand3.STL
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/launch/display_scara.launch.py
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/launch/sim_scara.launch.py
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/controllers.yaml
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/joint_names_urdf_Scara.yaml
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/scara_cnc.rviz
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/scara_rsp.yaml
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/package_run_dependencies/scara_cnc
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/parent_prefix_path/scara_cnc
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/path.sh
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/path.dsv
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.bash
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.sh
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.zsh
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.dsv
+-- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/package.dsv
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/packages/scara_cnc
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/cmake/scara_cncConfig.cmake
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/cmake/scara_cncConfig-version.cmake
+-- Up-to-date symlink: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/package.xml

@@ -1,0 +1,1 @@
+/home/spoonge/ros2_ws/src/build/tb3_aruco_mission/launch/aruco_nav_test.launch.py

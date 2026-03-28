@@ -1,0 +1,9 @@
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/uninstall.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/scara_cnc_uninstall.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/test.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/edit_cache.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/rebuild_cache.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/list_install_components.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/install.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/install/local.dir
+/home/spoonge/ros2_ws/src/build/scara_cnc/CMakeFiles/install/strip.dir

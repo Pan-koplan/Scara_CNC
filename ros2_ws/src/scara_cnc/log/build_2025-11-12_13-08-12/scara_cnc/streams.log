@@ -1,0 +1,53 @@
+[0.014s] Invoking command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/ros2_ws/src/scara_cnc -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc
+[0.186s] -- The C compiler identification is GNU 13.3.0
+[0.316s] -- The CXX compiler identification is GNU 13.3.0
+[0.345s] -- Detecting C compiler ABI info
+[0.475s] -- Detecting C compiler ABI info - done
+[0.485s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.485s] -- Detecting C compile features
+[0.485s] -- Detecting C compile features - done
+[0.500s] -- Detecting CXX compiler ABI info
+[0.626s] -- Detecting CXX compiler ABI info - done
+[0.635s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.636s] -- Detecting CXX compile features
+[0.636s] -- Detecting CXX compile features - done
+[0.666s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.844s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.938s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.103s] -- Configuring done (1.1s)
+[1.107s] -- Generating done (0.0s)
+[1.109s] -- Build files have been written to: /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc
+[1.115s] Invoked command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/ros2_ws/src/scara_cnc -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc
+[1.117s] Invoking command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc -- -j12 -l12
+[1.171s] Invoked command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc -- -j12 -l12
+[1.183s] Invoking command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc
+[1.194s] -- Install configuration: ""
+[1.194s] -- Execute custom install script
+[1.195s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/scara.urdf
+[1.207s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/urdf/urdf_Scara.csv
+[1.220s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/base_link.STL
+[1.233s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand1.STL
+[1.244s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand2.STL
+[1.256s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/meshes/hand3.STL
+[1.269s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/launch/display_scara.launch.py
+[1.288s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/launch/sim_scara.launch.py
+[1.301s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/controllers.yaml
+[1.313s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/joint_names_urdf_Scara.yaml
+[1.325s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/scara_cnc.rviz
+[1.338s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/config/scara_rsp.yaml
+[1.350s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/package_run_dependencies/scara_cnc
+[1.363s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/parent_prefix_path/scara_cnc
+[1.376s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/ament_prefix_path.sh
+[1.388s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/ament_prefix_path.dsv
+[1.400s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/path.sh
+[1.413s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/environment/path.dsv
+[1.425s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.bash
+[1.437s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.sh
+[1.449s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.zsh
+[1.461s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/local_setup.dsv
+[1.478s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/package.dsv
+[1.490s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/ament_index/resource_index/packages/scara_cnc
+[1.503s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/cmake/scara_cncConfig.cmake
+[1.515s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/cmake/scara_cncConfig-version.cmake
+[1.528s] -- Symlinking: /home/spoonge/ros2_ws/src/scara_cnc/install/scara_cnc/share/scara_cnc/package.xml
+[1.542s] Invoked command in '/home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/ros2_ws/src/scara_cnc/build/scara_cnc

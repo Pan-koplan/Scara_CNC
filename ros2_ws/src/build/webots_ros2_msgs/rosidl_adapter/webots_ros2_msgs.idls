@@ -1,0 +1,12 @@
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:msg/BoolStamped.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:msg/FloatStamped.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:msg/StringStamped.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:msg/CameraRecognitionObject.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:msg/CameraRecognitionObjects.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:msg/UrdfRobot.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:msg/PenInkProperties.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:srv/EmitterSendString.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:srv/GetBool.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:srv/SetString.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:srv/SpawnNodeFromString.idl
+/home/spoonge/ros2_ws/src/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs:srv/SpawnUrdfRobot.idl

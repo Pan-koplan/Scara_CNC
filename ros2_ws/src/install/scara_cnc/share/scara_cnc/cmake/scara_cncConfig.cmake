@@ -1,0 +1,1 @@
+/home/spoonge/ros2_ws/src/build/scara_cnc/ament_cmake_core/scara_cncConfig.cmake

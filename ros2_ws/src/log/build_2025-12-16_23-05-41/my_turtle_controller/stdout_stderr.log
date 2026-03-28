@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating my_turtle_controller.egg-info
+writing my_turtle_controller.egg-info/PKG-INFO
+writing dependency_links to my_turtle_controller.egg-info/dependency_links.txt
+writing entry points to my_turtle_controller.egg-info/entry_points.txt
+writing requirements to my_turtle_controller.egg-info/requires.txt
+writing top-level names to my_turtle_controller.egg-info/top_level.txt
+writing manifest file 'my_turtle_controller.egg-info/SOURCES.txt'
+reading manifest file 'my_turtle_controller.egg-info/SOURCES.txt'
+writing manifest file 'my_turtle_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/spoonge/ros2_ws/src/install/my_turtle_controller/lib/python3.12/site-packages/my-turtle-controller.egg-link (link to .)
+Installing turtle_figure8 script to /home/spoonge/ros2_ws/src/install/my_turtle_controller/lib/my_turtle_controller
+Installing turtle_mover script to /home/spoonge/ros2_ws/src/install/my_turtle_controller/lib/my_turtle_controller
+Installing turtle_pose_follower script to /home/spoonge/ros2_ws/src/install/my_turtle_controller/lib/my_turtle_controller
+
+Installed /home/spoonge/ros2_ws/src/build/my_turtle_controller
+running symlink_data
+creating /home/spoonge/ros2_ws/src/install/my_turtle_controller/share/ament_index
+creating /home/spoonge/ros2_ws/src/install/my_turtle_controller/share/ament_index/resource_index
+creating /home/spoonge/ros2_ws/src/install/my_turtle_controller/share/ament_index/resource_index/packages
+symbolically linking /home/spoonge/ros2_ws/src/build/my_turtle_controller/resource/my_turtle_controller -> /home/spoonge/ros2_ws/src/install/my_turtle_controller/share/ament_index/resource_index/packages
+symbolically linking /home/spoonge/ros2_ws/src/build/my_turtle_controller/package.xml -> /home/spoonge/ros2_ws/src/install/my_turtle_controller/share/my_turtle_controller

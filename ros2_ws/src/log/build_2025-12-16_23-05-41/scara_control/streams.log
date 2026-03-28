@@ -1,0 +1,42 @@
+[1.255s] Invoking command in '/home/spoonge/ros2_ws/src/build/scara_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/ros2_ws/src/scara_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/spoonge/ros2_ws/src/install/scara_control
+[1.702s] -- The C compiler identification is GNU 13.3.0
+[1.702s] -- The CXX compiler identification is GNU 13.3.0
+[1.702s] -- Detecting C compiler ABI info
+[1.702s] -- Detecting C compiler ABI info - done
+[1.702s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.702s] -- Detecting C compile features
+[1.702s] -- Detecting C compile features - done
+[1.705s] -- Detecting CXX compiler ABI info
+[1.871s] -- Detecting CXX compiler ABI info - done
+[1.885s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.885s] -- Detecting CXX compile features
+[1.886s] -- Detecting CXX compile features - done
+[1.893s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.175s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.356s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.721s] -- Configuring done (1.4s)
+[2.728s] -- Generating done (0.0s)
+[2.731s] -- Build files have been written to: /home/spoonge/ros2_ws/src/build/scara_control
+[2.747s] Invoked command in '/home/spoonge/ros2_ws/src/build/scara_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/ros2_ws/src/scara_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/spoonge/ros2_ws/src/install/scara_control
+[2.747s] Invoking command in '/home/spoonge/ros2_ws/src/build/scara_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/ros2_ws/src/build/scara_control -- -j12 -l12
+[2.856s] Invoked command in '/home/spoonge/ros2_ws/src/build/scara_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/spoonge/ros2_ws/src/build/scara_control -- -j12 -l12
+[2.858s] Invoking command in '/home/spoonge/ros2_ws/src/build/scara_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/ros2_ws/src/build/scara_control
+[2.878s] -- Install configuration: ""
+[2.880s] -- Execute custom install script
+[2.880s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/config/controllers.yaml
+[2.905s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/ament_index/resource_index/package_run_dependencies/scara_control
+[2.929s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/ament_index/resource_index/parent_prefix_path/scara_control
+[2.954s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/environment/ament_prefix_path.sh
+[2.979s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/environment/ament_prefix_path.dsv
+[3.004s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/environment/path.sh
+[3.028s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/environment/path.dsv
+[3.054s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/local_setup.bash
+[3.081s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/local_setup.sh
+[3.104s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/local_setup.zsh
+[3.127s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/local_setup.dsv
+[3.156s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/package.dsv
+[3.182s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/ament_index/resource_index/packages/scara_control
+[3.206s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/cmake/scara_controlConfig.cmake
+[3.230s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/cmake/scara_controlConfig-version.cmake
+[3.268s] -- Symlinking: /home/spoonge/ros2_ws/src/install/scara_control/share/scara_control/package.xml
+[3.304s] Invoked command in '/home/spoonge/ros2_ws/src/build/scara_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spoonge/ros2_ws/src/scara_bringup/install/scara_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/spoonge/ros2_ws/src/build/scara_control

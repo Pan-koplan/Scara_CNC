@@ -1,0 +1,9 @@
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/uninstall.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/scara_control_uninstall.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/test.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/edit_cache.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/rebuild_cache.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/list_install_components.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/install.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/install/local.dir
+/home/spoonge/ros2_ws/src/build/scara_control/CMakeFiles/install/strip.dir

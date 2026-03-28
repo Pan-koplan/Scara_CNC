@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="default">
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+
+    <model name="floor">
+      <static>true</static>
+      <link name="floor_link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>5 5</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>5 5</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <include>
+      <name>detail_number_1</name>
+      <uri>model://table</uri>
+      <pose>0 0 0 1.5708 0 0</pose>
+    </include>
+
+    <include>
+      <name>detail_number_2</name>
+      <uri>model://detail</uri>
+      <pose>0.1 -0.4 0.91 1.5708 0 0</pose>
+    </include>
+    
+    <include>
+      <name>detail_number_3</name>
+      <uri>model://detail</uri>
+      <pose>0.35 -0.2 0.91 1.5708 0 0</pose>
+    </include>
+
+    <include>
+      <name>detail_number_4</name>
+      <uri>model://detail</uri>
+      <pose>0.35 -0.2 0.93 1.5708 0 0</pose>
+    </include>
+
+    <include>
+      <name>detail_number_5</name>
+      <uri>model://detail</uri>
+      <pose>0.35 -0.2 0.95 1.5708 0 0</pose>
+    </include>
+
+  </world>
+</sdf>
