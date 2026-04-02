@@ -19,7 +19,7 @@ source /opt/ros/jazzy/setup.bash
 source "$ROS_WS/install/setup.bash"
 
 echo "Запускаю симуляцию..."
-ros2 launch scara_bringup bringup.launch.py &
+ros2 launch scara_bringup bringup.launch.py use_rviz:=false &
 SIM_PID=$!
 
 sleep 5
