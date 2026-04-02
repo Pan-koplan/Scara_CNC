@@ -32,6 +32,7 @@ setup(
             'MoveIT_cnc_coop = scara_application.MoveIT_cnc_coop:main',
 	    'web_goal_listener = scara_application.web_goal_listener:main',
 	    'web_motion_executor = scara_application.web_motion_executor:main',
+        'web_joint_executor = scara_application.web_joint_executor:main',
         ],
     },
 )
