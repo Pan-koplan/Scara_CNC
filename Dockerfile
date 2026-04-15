@@ -9,6 +9,11 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN apt-get update && apt-get install -y \
     python3-pip \
     python3-venv \
+    python3-setuptools \
+    python3-packaging \
+    python3-catkin-pkg \
+    python3-empy \
+    python3-lark \
     python3-colcon-common-extensions \
     python3-rosdep \
     python3-vcstool \
@@ -30,9 +35,10 @@ RUN apt-get update && apt-get install -y \
 # Python backend deps
 COPY backend/requirements.txt /app/backend/requirements.txt
 
-RUN python3 -m venv /opt/venv && \
+RUN python3 -m venv /opt/venv --system-site-packages && \
     source /opt/venv/bin/activate && \
     pip install --upgrade pip && \
+    pip install --no-cache-dir catkin_pkg && \
     pip install --no-cache-dir -r /app/backend/requirements.txt
 
 ENV PATH="/opt/venv/bin:$PATH"
