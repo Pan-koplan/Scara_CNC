@@ -1,16 +1,14 @@
-version: "3.8"
 services:
-  services:
-    robot:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      container_name: scara_robot
-      network_mode: host
-      privileged: true
-      environment:
-        MODE: hw
-        SERIAL_PORT: /dev/ttyUSB0
-      devices:
-        - /dev/ttyUSB0:/dev/ttyUSB0
-      restart: unless-stopped
+  robot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scara_robot
+    network_mode: host
+    privileged: true
+    environment:
+      MODE: hw
+      SERIAL_PORT: /dev/ttyUSB0
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    restart: unless-stopped
