@@ -1,17 +1,16 @@
-version: '3.8'
+version: "3.8"
 services:
-  backend:
-    build: ./backend
-    ports:
-      - "8000:8000"
-    # devices:
-    #   - "/dev/ttyUSB0:/dev/ttyUSB0" # Пробрасываем USB-порт с ESP32 внутрь контейнера
-    restart: always
-
-  frontend:
-    build: ./frontend
-    ports:
-      - "3000:3000"
-      - "5173:5173"
-    environment:
-      - REACT_APP_BACKEND_URL=ws://localhost:8000/ws
+  services:
+    robot:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      container_name: scara_robot
+      network_mode: host
+      privileged: true
+      environment:
+        MODE: hw
+        SERIAL_PORT: /dev/ttyUSB0
+      devices:
+        - /dev/ttyUSB0:/dev/ttyUSB0
+      restart: unless-stopped

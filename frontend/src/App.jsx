@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 function App() {
   const ws = useRef(null);
-
   const [status, setStatus] = useState("Connecting...");
   const [robot, setRobot] = useState({
     j1: 0,
@@ -18,8 +17,8 @@ function App() {
   const center = 220;
 
   useEffect(() => {
-    ws.current = new WebSocket(`ws://${window.location.hostname}:8000/ws`);
-
+    const proto = window.location.protocol === "https:" ? "wss" : "ws";
+    ws.current = new WebSocket(`${proto}://${window.location.host}/ws`);
     ws.current.onopen = () => setStatus("Online");
     ws.current.onclose = () => setStatus("Offline");
 
