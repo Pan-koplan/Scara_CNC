@@ -3,10 +3,12 @@ FROM ros:jazzy-ros-base
 SHELL ["/bin/bash", "-c"]
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
+ENV PATH="/opt/venv/bin:$PATH"
 
 # Системные зависимости
 RUN apt-get update && apt-get install -y \
     python3-pip \
+    python3-venv \
     python3-colcon-common-extensions \
     python3-rosdep \
     python3-vcstool \
@@ -27,7 +29,13 @@ RUN apt-get update && apt-get install -y \
 
 # Python backend deps
 COPY backend/requirements.txt /app/backend/requirements.txt
-RUN pip3 install --no-cache-dir -r /app/backend/requirements.txt
+
+RUN python3 -m venv /opt/venv && \
+    source /opt/venv/bin/activate && \
+    pip install --upgrade pip && \
+    pip install --no-cache-dir -r /app/backend/requirements.txt
+
+ENV PATH="/opt/venv/bin:$PATH"
 
 # Frontend build
 COPY frontend /app/frontend
