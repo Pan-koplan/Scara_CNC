@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y \
     ros-jazzy-geometry-msgs \
     ros-jazzy-std-msgs \
     ros-jazzy-launch-ros \
+    
     nodejs \
     npm \
     && rm -rf /var/lib/apt/lists/*
