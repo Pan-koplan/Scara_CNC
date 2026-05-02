@@ -1,17 +1,63 @@
-# ROS
+# ROS2 build artifacts
 ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
+ros2_ws/src/**/build/
+ros2_ws/src/**/install/
+ros2_ws/src/**/log/
+build/
+install/
+log/
+*.orig
+*.log
+*.gcno
+*.gcda
+
+colcon_command_prefix_*.sh
+colcon_command_prefix_*.bat
+colcon_command_prefix_*.ps1
 
 # Python
 __pycache__/
 *.pyc
+*.py[cod]
+.Python
+venv/
+.venv/
+*$py.class
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+
 # core dumps
 core
 core.*
 *.core
 ros2_ws/core
+*.so
 
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Frontend build
+frontend/dist/
+backend/static/assets/
 .git
 .gitignore
 build
@@ -24,3 +70,16 @@ frontend/node_modules
 frontend/dist
 **/__pycache__
 **/*.pyc
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Local config 
+*.env
+*.local
+
+# OS
+.DS_Store
+Thumbs.db

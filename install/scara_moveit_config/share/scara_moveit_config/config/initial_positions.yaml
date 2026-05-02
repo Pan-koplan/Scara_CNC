@@ -1,6 +1,0 @@
-# Default initial positions for scara's ros2_control fake system
-
-initial_positions:
-  hand1_joint: 0
-  hand2_joint: 0
-  hand3_joint: 0

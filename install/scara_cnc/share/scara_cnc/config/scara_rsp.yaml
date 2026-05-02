@@ -1,8 +1,0 @@
-robot_state_publisher:
-  ros__parameters:
-    robot_description: |
-      <?xml version="1.0" encoding="utf-8"?>
-      <!-- This URDF was automatically created by SolidWorks to URDF Exporter! -->
-      <robot name="urdf_Scara">
-        <!-- СЮДА ВСТАВЬ ВЕСЬ ОСТАЛЬНЫЙ URDF ИЗ urdf/urdf_Scara.urdf -->
-      </robot>
