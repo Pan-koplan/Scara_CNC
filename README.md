@@ -1,40 +1,18 @@
 ```markdown
-# Scara_CNC
+# 🔧 Разработка (с hot-reload)
+ENV=development docker-compose --profile dev up
 
-Система управления SCARA-манипулятором через веб-интерфейс с поддержкой симуляции в Gazebo и работы с реальным оборудованием.
+# 🎮 Симуляция
+ENV=production docker-compose --profile sim up
 
-## ✨ Возможности
+# 🔌 Реальное железо
+ENV=production docker-compose --profile hw up
 
-- 🤖 Симуляция в Gazebo (ros_gz) + работа с реальным роботом
-- 🌐 Веб-интерфейс на React (Vite) с WebSocket
-- 🔌 Backend на FastAPI
-- 🧠 ROS 2 Jazzy + ros2_control + MoveIt
-- 🐳 Полная контейнеризация через Docker
-- 🔄 Hot-reload для разработки
+# 🧪 Только бэкенд для тестов API
+cd backend && uvicorn src.main:app --reload
 
----
-
-## 🚀 Быстрый старт (Docker)
-
-### Требования
-
-- Ubuntu 24.04 (или другой Linux с Docker)
-- Docker Engine ≥ 24.0 + Docker Compose ≥ 2.20
-- Для GUI в симуляции: `xhost +local:docker`
-
-### Запуск симуляции
-
-```bash
-# Клонирование репозитория
-git clone https://github.com/Pan-koplan/Scara_CNC.git
-cd Scara_CNC
-
-# Разрешаем доступ к X11 для Gazebo GUI
-xhost +local:docker
-
-# Запускаем симуляцию
-docker compose --profile sim up
-```
+# 🎨 Только фронтенд (прокси на локальный бэкенд)
+cd frontend && npm run dev
 
 ### Запуск с реальным роботом
 
