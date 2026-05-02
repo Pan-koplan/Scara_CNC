@@ -1,211 +1,373 @@
-## Запуск симуляции
-
-```bash
-git clone https://github.com/Pan-koplan/Scara_CNC.git
-cd Scara_CNC/ros2_ws
-
-source /opt/ros/jazzy/setup.bash
-colcon build
-source install/setup.bash
-
-ros2 launch scara_bringup bringup.launch.py
-```
-
-## Запуск ПО
-
-./run_demo.sh
-
-````md
+```markdown
 # Scara_CNC
 
-Проект демонстрирует систему управления SCARA-манипулятором через веб-интерфейс.
+Система управления SCARA-манипулятором через веб-интерфейс с поддержкой симуляции в Gazebo и работы с реальным оборудованием.
 
-В текущей версии реализовано:
-- симуляция робота в Gazebo
-- управление через ROS 2 Jazzy
-- backend на FastAPI (WebSocket)
-- frontend на React (Vite)
-- передача команд из веба в ROS и выполнение траекторий
+## ✨ Возможности
 
----
-
-## Архитектура
-
-```text
-Frontend (React)
-        ↓ WebSocket
-Backend (FastAPI)
-        ↓ ROS topic
-web_motion_executor (ROS 2)
-        ↓ Action
-ros2_control → Gazebo
-````
+- 🤖 Симуляция в Gazebo (ros_gz) + работа с реальным роботом
+- 🌐 Веб-интерфейс на React (Vite) с WebSocket
+- 🔌 Backend на FastAPI
+- 🧠 ROS 2 Jazzy + ros2_control + MoveIt
+- 🐳 Полная контейнеризация через Docker
+- 🔄 Hot-reload для разработки
 
 ---
 
-## Требования
+## 🚀 Быстрый старт (Docker)
 
-* Ubuntu 24.04
-* ROS 2 Jazzy
-* Gazebo (ros_gz)
-* Python 3
-* Node.js 22 + npm
+### Требования
 
----
+- Ubuntu 24.04 (или другой Linux с Docker)
+- Docker Engine ≥ 24.0 + Docker Compose ≥ 2.20
+- Для GUI в симуляции: `xhost +local:docker`
 
-## Быстрый старт
+### Запуск симуляции
 
 ```bash
+# Клонирование репозитория
 git clone https://github.com/Pan-koplan/Scara_CNC.git
 cd Scara_CNC
 
-./setup_demo.sh
-./run_demo.sh
+# Разрешаем доступ к X11 для Gazebo GUI
+xhost +local:docker
+
+# Запускаем симуляцию
+docker compose --profile sim up
 ```
 
-После запуска:
+### Запуск с реальным роботом
 
-* Frontend: [http://localhost:5173](http://localhost:5173)
-* Backend: [http://localhost:8000](http://localhost:8000)
-* WebSocket: ws://localhost:8000/ws
+```bash
+# Подключи контроллер по USB (/dev/ttyUSB0)
+docker compose --profile hw up
+```
+
+### Остановка
+
+```bash
+docker compose --profile sim down
+# или
+docker compose --profile hw down
+```
+
+### После запуска
+
+| Компонент | Адрес |
+|-----------|-------|
+| 🌐 Веб-интерфейс | [http://localhost:8000](http://localhost:8000) |
+| 🔌 WebSocket | `ws://localhost:8000/ws` |
+| 🧪 ROS topics | `docker exec -it scara_robot_sim bash` → `ros2 topic list` |
 
 ---
 
-## Установка (вручную)
+## 🛠 Разработка (горячая перезагрузка)
 
-### 1. Backend
+### Архитектура с volumes
 
-```bash
-cd backend
-python3 -m pip install -r requirements.txt
-cd ..
+```yaml
+# docker-compose.yml
+volumes:
+  - ./backend:/app/backend          # hot-reload для FastAPI
+  - ./ros2_ws/src:/app/ros2_ws/src  # активная разработка ROS-пакетов
 ```
 
-### 2. Node.js 22
+### Изменения применяются мгновенно:
+
+- Правки в `backend/*.py` → авто-релоад через uvicorn
+- Правки в `ros2_ws/src/*` → `colcon build` внутри контейнера
+- Правки в `frontend/*` → запусти Vite dev отдельно (см. ниже)
+
+### Frontend в dev-режиме (опционально)
+
+Если хочешь hot-reload для React:
 
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.bashrc
+# В одном терминале — Docker без фронтенда
+docker compose --profile sim up --no-start  # только поднимает ROS
 
-nvm install 22
-nvm use 22
-nvm alias default 22
-```
-
-### 3. Frontend
-
-```bash
+# В другом — Vite dev server
 cd frontend
 npm install
-cd ..
+npm run dev  # → http://localhost:5173
 ```
 
-### 4. ROS 2 workspace
+> В этом режиме фронтенд обращается к бэкенду на `http://localhost:8000`
+
+---
+
+## 🧩 Ручной запуск (без Docker)
+
+> Для отладки или если Docker не подходит
+
+### Требования
+
+- Ubuntu 24.04, ROS 2 Jazzy, Python 3.10+, Node.js 22+
+
+### Установка
 
 ```bash
+# 1. ROS workspace
 cd ros2_ws
 source /opt/ros/jazzy/setup.bash
 colcon build
 source install/setup.bash
-cd ..
+
+# 2. Backend
+cd ../backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# 3. Frontend
+cd ../frontend
+npm install
 ```
 
----
-
-## Ручной запуск
-
-### Симуляция
+### Запуск (4 терминала)
 
 ```bash
-cd ros2_ws
-source /opt/ros/jazzy/setup.bash
-source install/setup.bash
-ros2 launch scara_bringup bringup.launch.py
-```
-
-### Исполнитель команд
-
-```bash
-ros2 run scara_application web_motion_executor
-```
-
-### Backend
-
-```bash
-source /opt/ros/jazzy/setup.bash
+# Терминал 1: симуляция
 source ros2_ws/install/setup.bash
+ros2 launch scara_bringup bringup.launch.py
+
+# Терминал 2: backend
+source ros2_ws/install/setup.bash
+source backend/venv/bin/activate
 python3 -m uvicorn backend.main:app --host 0.0.0.0 --port 8000
+
+# Терминал 3: frontend
+cd frontend && npm run dev
+
+# Терминал 4 (опционально): отладка ROS
+ros2 topic echo /joint_states
 ```
 
-### Frontend
+---
+
+## 🏗 Архитектура
+
+```
+┌─────────────────┐
+│   Browser       │
+│   (React/Vite)  │
+└──────┬──────────┘
+       │ HTTP/WebSocket
+       ▼
+┌─────────────────┐
+│   FastAPI       │
+│   (backend/)    │
+└────────────────┘
+       │ rclpy / ROS 2 API
+       ▼
+┌─────────────────┐
+│   ROS 2 Nodes   │
+│   • web_bridge_node    │
+│   • web_motion_executor│
+│   • ros2_control     │
+└────────────────┘
+       │
+   ┌───┴───┐
+   ▼       ▼
+[Gazebo] [ESP32/Real HW]
+```
+
+### Ключевые компоненты
+
+| Компонент | Назначение |
+|-----------|------------|
+| `web_bridge_node` | Мост WebSocket → ROS topics |
+| `web_motion_executor` | Исполнение траекторий через Action Server |
+| `scara_controller` | `JointTrajectoryController` для управления суставами |
+| `gz_ros2_control` | Связка Gazebo ↔ ros2_control |
+
+---
+
+## ⚙️ Конфигурация
+
+### Профили Docker
+
+| Профиль | Сервис | Назначение |
+|---------|--------|------------|
+| `sim` | `robot_sim` | Симуляция в Gazebo + GUI |
+| `hw` | `robot_hw` | Работа с реальным манипулятором |
+
+### Переменные окружения
+
+```env
+# .env (опционально)
+DISPLAY=:0                    # для GUI в симуляции
+SERIAL_PORT=/dev/ttyUSB0      # для hw-режима
+```
+
+---
+
+## 📱 Доступ с других устройств
+
+1. Подключи устройство к той же сети
+2. Узнай IP хоста: `hostname -I`
+3. Открой: `http://<IP>:8000`
+
+> Для WebSocket убедись, что нет блокировок фаервола на порт 8000.
+
+---
+
+## 🐛 Диагностика
+
+### Контейнер не видит X11
 
 ```bash
-cd frontend
-npm run dev -- --host 0.0.0.0
+xhost +local:docker
+docker compose --profile sim up
 ```
 
----
-
-## Использование
-
-В веб-интерфейсе доступны:
-
-* пресеты:
-
-  * HOME
-  * POINT_A
-  * POINT_B
-* ручной ввод координат X/Y
-* отправка команд роботу
-* отображение статуса и ответа сервера
-
----
-
-## Доступ с телефона
-
-1. Подключить телефон и компьютер к одной сети
-2. Узнать IP компьютера:
+### ROS пакет не найден
 
 ```bash
-hostname -I
+docker exec -it scara_robot_sim bash
+source /app/ros2_ws/install/setup.bash
+ros2 pkg list | grep scara
 ```
 
-3. Открыть в браузере:
+### Фронтенд — белый экран
 
-```text
-http://<IP_КОМПЬЮТЕРА>:5173
+- Проверь консоль браузера (F12 → Console)
+- Убедись, что `/assets/*.js` возвращают `200` и `application/javascript`
+- Очисти кэш браузера (Ctrl+Shift+R)
+
+### Контроллер не активируется
+
+```bash
+docker exec -it scara_robot_sim bash
+ros2 control list_controllers
+ros2 topic echo /scara_controller/joint_trajectory --once
 ```
+
+### Backend не перезагружается
+
+- Убедись, что volume подключен: `docker inspect scara_robot_sim | grep -A 5 Mounts`
+- Проверь логи: `docker compose logs -f robot_sim | grep "Will watch for changes"`
 
 ---
 
-## Структура проекта
+## 🗂 Структура проекта
 
-```text
+```
 Scara_CNC/
+├── docker/
+│   ├── Dockerfile           # multi-stage: base/sim/hw
+│   ├── entrypoint.sim.sh    # запуск симуляции
+│   └── entrypoint.hw.sh     # запуск с железом
 ├── backend/
+│   ├── main.py              # FastAPI + WebSocket + ROS bridge
+│   ├── requirements.txt
+│   └── static/              # собранный frontend (production)
 ├── frontend/
+│   ├── src/
+│   │   ├── App.jsx          # основной компонент
+│   │   └── main.jsx         # точка входа
+│   ├── vite.config.js
+│   └── package.json
 ├── ros2_ws/
-├── run_demo.sh
-├── setup_demo.sh
+│   └── src/
+│       ├── scara_bringup/       # launch-файлы
+│       ├── scara_control/       # ros2_control config
+│       ├── scara_sim/           # Gazebo worlds/models
+│       ├── scara_application/   # web_motion_executor, web_bridge_node
+│       └── ...
+├── docker-compose.yml
+├── .gitignore
 └── README.md
 ```
 
 ---
 
-## Известные ограничения
+## 📋 Чеклист перед пушем
 
-* работает в режиме симуляции
-* требует установленный ROS 2 Jazzy на хосте
-* Docker-конфигурация не покрывает полный стек
+- [ ] `docker compose --profile sim up` работает с чистого клона
+- [ ] `xhost +local:docker` задокументировано
+- [ ] В `.gitignore` нет `build/`, `install/`, `node_modules/`
+- [ ] README отражает актуальный workflow
+- [ ] Все правки в `backend/main.py` закоммичены
 
 ---
 
-## Дальнейшее развитие
+## 🚧 Известные ограничения
 
-* цифровой двойник в веб-интерфейсе
-* визуализация положения робота
-* режим real hardware (ESP32)
-* интеграция с ЧПУ
+- Требуется `xhost +local:docker` для GUI в симуляции
+- При первом запуске сборка образа может занять 10–20 минут
+- Для hw-режима нужен доступ к `/dev/ttyUSB0` (udev правила)
+- Frontend в production режиме — статические файлы, нет hot-reload
 
+---
+
+## 🔮 Планы развития
+
+- [ ] Цифровой двойник: визуализация положения в реальном времени
+- [ ] Поддержка траекторий из G-code
+- [ ] Режим ESP32: управление по UART/Bluetooth
+- [ ] Мультиконтейнерная архитектура (ROS/backend/frontend отдельно)
+
+---
+
+## 💡 Советы по разработке
+
+### Быстрая пересборка
+
+```bash
+# Только backend (с volumes)
+docker compose restart robot_sim
+
+# С пересборкой образа
+docker compose up -d --build robot_sim
+
+# Полная пересборка без кэша
+docker compose build --no-cache robot_sim
 ```
+
+### Отладка ROS внутри контейнера
+
+```bash
+docker exec -it scara_robot_sim bash
+source /app/ros2_ws/install/setup.bash
+
+# Просмотр топиков
+ros2 topic list
+ros2 topic echo /joint_states
+
+# Управление контроллерами
+ros2 control list_controllers
+ros2 topic pub /scara_controller/joint_trajectory ...
+```
+
+### Логирование
+
+```bash
+# Все логи
+docker compose logs -f robot_sim
+
+# Только ROS
+docker compose logs -f robot_sim | grep "\[INFO\]"
+
+# Только backend
+docker compose logs -f robot_sim | grep "INFO:     "
+```
+
+---
+
+> 💡 **Совет**: Для разработки используй `volumes` — изменения в коде применяются мгновенно без `docker build`.
+
+---
+
+## 📄 Лицензия
+
+MIT License — см. файл LICENSE
+
+## 👥 Авторы
+
+- **spoonge** ([@Pan-koplan](https://github.com/Pan-koplan))
+
+---
+
+**Happy Coding! 🚀**
 ```
