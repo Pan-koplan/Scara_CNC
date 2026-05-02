@@ -1,2 +1,0 @@
-[console_scripts]
-listener = listener.listener_node:main

@@ -1,8 +1,0 @@
-[console_scripts]
-aruco_detector = tb3_aruco_mission.aruco_detector:main
-aruco_detector_node = tb3_aruco_mission.aruco_detector_node:main
-aruco_to_id = tb3_aruco_mission.nav_aruco_to_id:main
-nav_aruco_optimal = tb3_aruco_mission.nav_aruco_optimal:main
-nav_aruco_to_id = tb3_aruco_mission.nav_aruco_to_id:main
-nav_optimal_four = tb3_aruco_mission.nav_optimal_four:main
-nav_three_points = tb3_aruco_mission.nav_three_points:main

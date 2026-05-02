@@ -1,1 +1,0 @@
-/home/spoonge/ros2_ws/src/scara_cnc/urdf/install/local_setup.bash

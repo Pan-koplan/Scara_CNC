@@ -1,12 +1,13 @@
-FROM ros:jazzy-ros-base
+FROM ros:jazzy-ros-base AS base
 
 SHELL ["/bin/bash", "-c"]
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
-ENV PATH="/opt/venv/bin:$PATH"
 
-# Системные зависимости
-RUN apt-get update && apt-get install -y \
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get update && \
+    apt-get install -y \
     python3-pip \
     python3-venv \
     python3-setuptools \
@@ -28,12 +29,14 @@ RUN apt-get update && apt-get install -y \
     ros-jazzy-geometry-msgs \
     ros-jazzy-std-msgs \
     ros-jazzy-launch-ros \
-    
+    ros-jazzy-moveit \
+    ros-jazzy-moveit-common \
+    ros-jazzy-moveit-ros-planning-interface \
+    ros-jazzy-moveit-planners-ompl \
     nodejs \
-    npm \
-    && rm -rf /var/lib/apt/lists/*
+    npm && \
+    rm -rf /var/lib/apt/lists/*
 
-# Python backend deps
 COPY backend/requirements.txt /app/backend/requirements.txt
 
 RUN python3 -m venv /opt/venv --system-site-packages && \
@@ -44,30 +47,55 @@ RUN python3 -m venv /opt/venv --system-site-packages && \
 
 ENV PATH="/opt/venv/bin:$PATH"
 
-# Frontend build
 COPY frontend /app/frontend
 RUN cd /app/frontend && npm install && npm run build
 
-# Repo contents
 COPY ros2_ws /app/ros2_ws
 COPY backend /app/backend
-COPY docker/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY docker/entrypoint.hw.sh /entrypoint.hw.sh
+COPY docker/entrypoint.sim.sh /entrypoint.sim.sh
 
-# rosdep init может уже быть в образе, но harmless guard
+RUN chmod +x /entrypoint.hw.sh /entrypoint.sim.sh
+
 RUN rosdep update || true
 
-# Сборка workspace
-RUN source /opt/ros/jazzy/setup.bash && \
-    cd /app/ros2_ws && \
-    colcon build --symlink-install
-
-# Сложим frontend dist рядом с backend static
 RUN mkdir -p /app/backend/static && \
     cp -r /app/frontend/dist/* /app/backend/static/
 
-ENV ROS_WS=/app/ros2_ws
-ENV PYTHONUNBUFFERED=1
+FROM base AS hw
+
+RUN rm -rf /app/ros2_ws/build /app/ros2_ws/install /app/ros2_ws/log && \
+    source /opt/ros/jazzy/setup.bash && \
+    cd /app/ros2_ws && \
+    colcon build --symlink-install \
+      --packages-up-to \
+        scara_bringup \
+        scara_application \
+      --packages-skip scara_sim scara_moveit_config scara_mtc
 
 EXPOSE 8000
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.hw.sh"]
+
+FROM base AS sim
+
+RUN apt-get update && apt-get install -y \
+    ros-jazzy-ros-gz \
+    ros-jazzy-ros-gz-sim \
+    ros-jazzy-ros-gz-bridge \
+    ros-jazzy-moveit-task-constructor-core \
+    ros-jazzy-moveit-task-constructor-msgs \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN rm -rf /app/ros2_ws/build /app/ros2_ws/install /app/ros2_ws/log && \
+    source /opt/ros/jazzy/setup.bash && \
+    cd /app/ros2_ws && \
+    colcon build --symlink-install \
+      --packages-up-to \
+        scara_bringup \
+        scara_application \
+        scara_sim \
+        scara_moveit_config \
+      --packages-skip scara_mtc
+
+EXPOSE 8000
+ENTRYPOINT ["/entrypoint.sim.sh"]

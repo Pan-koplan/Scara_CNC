@@ -1,1 +1,0 @@
-Invoking command in '/home/spoonge/ros2_ws/src/build/webots_ros2_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/spoonge/ros2_ws/src/webots_ros2/webots_ros2_msgs -DCMAKE_INSTALL_PREFIX=/home/spoonge/ros2_ws/src/install/webots_ros2_msgs

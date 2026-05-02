@@ -1,1 +1,0 @@
-/home/spoonge/ros2_ws/src/build/scara_control/ament_cmake_environment_hooks/local_setup.zsh
