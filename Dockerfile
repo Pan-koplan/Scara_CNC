@@ -79,6 +79,7 @@ ENTRYPOINT ["/entrypoint.hw.sh"]
 FROM base AS sim
 
 RUN apt-get update && apt-get install -y \
+    ros-jazzy-gz-ros2-control \
     ros-jazzy-ros-gz \
     ros-jazzy-ros-gz-sim \
     ros-jazzy-ros-gz-bridge \

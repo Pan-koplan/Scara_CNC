@@ -27,5 +27,15 @@ services:
       DISPLAY: ${DISPLAY}
       QT_X11_NO_MITSHM: 1
     volumes:
+      # backend code (hot reload)
+      - ./backend/main.py:/app/backend/main.py
+
+      # ros packages (active dev)
+      - ./ros2_ws/src:/app/ros2_ws/src
+
+      # frontend source (если хочешь dev mode)
+      - ./frontend:/app/frontend
+
+      # X11 (GUI Gazebo)
       - /tmp/.X11-unix:/tmp/.X11-unix
     restart: unless-stopped

@@ -3,7 +3,12 @@ import math
 import threading
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 import uvicorn
+
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from builtin_interfaces.msg import Duration
 
 import rclpy
 from rclpy.node import Node
@@ -40,31 +45,32 @@ def fk(j1_deg, j2_deg):
 class WebBridgeNode(Node):
     def __init__(self):
         super().__init__("web_bridge_node")
-        self.pub = self.create_publisher(Float64MultiArray, "/scara/joint_goal", 10)
+        self.pub = self.create_publisher(JointTrajectory, "/scara_controller/joint_trajectory", 10)
         self.get_logger().info("web_bridge_node готов")
 
     def publish_joint_command(self, cmd: dict):
-        msg = Float64MultiArray()
+        msg = JointTrajectory()
 
-        # j1, j2 в радианах, z в метрах
-        msg.data = [
-            float(cmd.get("j1", 0.0)),
-            float(cmd.get("j2", 0.0)),
-            float(cmd.get("z", 0.0)),
-        ]
+        msg.joint_names = ["hand1_joint", "hand2_joint", "hand3_joint"]
+        
+        point = JointTrajectoryPoint()
 
+        point.positions = [cmd["j1"], cmd["j2"], cmd["z"]] 
+        point.time_from_start = Duration(sec=1)
+        
+        msg.points.append(point)
         self.pub.publish(msg)
-        self.get_logger().info(
-            f"Опубликована joint-команда: "
-            f"j1={msg.data[0]:.4f} rad, "
-            f"j2={msg.data[1]:.4f} rad, "
-            f"z={msg.data[2]:.4f} m"
-        )
+        self.get_logger().info(f"Published trajectory: {cmd}")
 
 
 def ros_spin():
     rclpy.spin(ros_node)
 
+@app.get("/")
+def root():
+    return FileResponse("/app/backend/static/index.html")
+
+app.mount("/assets", StaticFiles(directory="/app/backend/static/assets"), name="assets")
 
 @app.on_event("startup")
 async def startup_event():
@@ -163,4 +169,5 @@ async def websocket_endpoint(websocket: WebSocket):
 
 
 if __name__ == "__main__":
+    print(">>> BACKEND VERSION 2 <<<")
     uvicorn.run(app, host="0.0.0.0", port=8000)
