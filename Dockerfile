@@ -98,5 +98,14 @@ RUN rm -rf /app/ros2_ws/build /app/ros2_ws/install /app/ros2_ws/log && \
         scara_moveit_config \
       --packages-skip scara_mtc
 
+# Копируем бэкенд
+COPY backend/ /app/backend/
+
+# Копируем сборку фронтенда (должна быть собрана заранее!)
+COPY frontend/dist/ /app/backend/static/
+
+WORKDIR /app/backend
+CMD ["python", "main.py"]
+
 EXPOSE 8000
 ENTRYPOINT ["/entrypoint.sim.sh"]

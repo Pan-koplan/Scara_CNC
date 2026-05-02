@@ -14,6 +14,37 @@ from builtin_interfaces.msg import Duration
 
 import rclpy
 from rclpy.node import Node
+# === В начало файла, после импортов ===
+import os
+from pathlib import Path
+from fastapi import HTTPException
+
+PRESETS_FILE = Path("/app/backend/presets.json")  # Путь внутри Docker
+
+def load_presets() -> dict:
+    """Загружает пресеты из файла."""
+    if not PRESETS_FILE.exists():
+        return {}
+    try:
+        with open(PRESETS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return {}
+
+def save_presets(presets: dict):
+    """Сохраняет пресеты в файл."""
+    PRESETS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(PRESETS_FILE, "w", encoding="utf-8") as f:
+        json.dump(presets, f, indent=2, ensure_ascii=False)
+
+def clamp_preset_values(preset: dict) -> dict:
+    """Ограничивает значения пресета в рамках лимитов."""
+    result = {}
+    for joint in ["j1", "j2", "z", "tool"]:
+        if joint in preset:
+            limits = JOINT_LIMITS[joint]
+            result[joint] = clamp(float(preset[joint]), limits["min"], limits["max"])
+    return result
 
 app = FastAPI()
 
@@ -126,8 +157,13 @@ def root():
     return FileResponse("/app/backend/static/index.html")
 
 
-app.mount("/assets", StaticFiles(directory="/app/backend/static/assets"), name="assets")
-
+assets_dir = "/app/backend/static/assets"
+if os.path.exists(assets_dir):
+    app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+    print(f"✅ Static files mounted from {assets_dir}")
+else:
+    print(f"⚠️ Static files directory not found: {assets_dir}")
+    print("   Frontend will be unavailable, but API will work")
 
 @app.on_event("startup")
 async def startup_event():
@@ -151,6 +187,78 @@ async def shutdown_event():
         rclpy.shutdown()
     print("🛑 ROS 2 node shutdown")
 
+# === После существующих эндпоинтов, перед if __name__ == "__main__" ===
+
+@app.get("/api/presets")
+async def list_presets():
+    """Возвращает список всех пресетов."""
+    return {"presets": load_presets()}
+
+@app.post("/api/presets")
+async def create_preset(data: dict):
+    """
+    Создаёт новый пресет.
+    Ожидает: {"name": "my_preset", "values": {"j1": 30, "j2": 20, "z": 0, "tool": 0}}
+    """
+    name = data.get("name", "").strip()
+    values = data.get("values", {})
+    
+    if not name:
+        raise HTTPException(status_code=400, detail="Preset name is required")
+    if len(name) > 50:
+        raise HTTPException(status_code=400, detail="Name too long")
+    
+    # Валидация и ограничение значений
+    clamped = clamp_preset_values(values)
+    
+    presets = load_presets()
+    presets[name] = clamped
+    save_presets(presets)
+    
+    return {"success": True, "preset": {name: clamped}}
+
+@app.delete("/api/presets/{preset_name}")
+async def delete_preset(preset_name: str):
+    """Удаляет пресет по имени."""
+    if preset_name in ["home", "park"]:  # Защита системных пресетов
+        raise HTTPException(status_code=403, detail="Cannot delete system preset")
+    
+    presets = load_presets()
+    if preset_name not in presets:
+        raise HTTPException(status_code=404, detail="Preset not found")
+    
+    del presets[preset_name]
+    save_presets(presets)
+    return {"success": True}
+
+@app.post("/api/presets/{preset_name}/load")
+async def load_preset(preset_name: str):
+    """
+    Загружает пресет в текущее состояние робота.
+    Можно вызывать через HTTP или дублировать логику в WebSocket.
+    """
+    presets = load_presets()
+    if preset_name not in presets:
+        raise HTTPException(status_code=404, detail="Preset not found")
+    
+    values = clamp_preset_values(presets[preset_name])
+    
+    # Обновляем глобальное состояние
+    global robot_state
+    for joint in ["j1", "j2", "z", "tool"]:
+        if joint in values:
+            robot_state[joint] = values[joint]
+    
+    # Публикуем в ROS
+    if ros_node is not None:
+        ros_cmd = {
+            "j1": to_ros_units("j1", robot_state["j1"]),
+            "j2": to_ros_units("j2", robot_state["j2"]),
+            "z":  to_ros_units("z",  robot_state["z"]),
+        }
+        ros_node.publish_trajectory(ros_cmd, time_sec=0.5)
+    
+    return {"success": True, "state": robot_state.copy()}
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
@@ -203,12 +311,63 @@ async def websocket_endpoint(websocket: WebSocket):
                         limits = JOINT_LIMITS[joint]
                         robot_state[joint] = clamp(value, limits["min"], limits["max"])
                 print(f"🎯 PRESET: {robot_state}")
+            
+            
 
             # 4. Возврат в домашнюю позицию
             elif msg_type == "HOME":
                 for joint in robot_state:
                     robot_state[joint] = 0.0
                 print("🏠 HOME")
+            # === Внутри while True цикла, после существующих if msg_type ===
+
+            # 5. Сохранить текущее состояние как пресет
+            elif msg_type == "SAVE_PRESET":
+                name = msg.get("name", "").strip()
+                if name and len(name) <= 50:
+                    clamped = clamp_preset_values(robot_state.copy())
+                    presets = load_presets()
+                    presets[name] = clamped
+                    save_presets(presets)
+                    await websocket.send_json({
+                        "type": "PRESET_SAVED",
+                        "name": name,
+                        "values": clamped
+                    })
+                    print(f"💾 Preset saved: {name}")
+
+            # 6. Загрузить пресет
+            elif msg_type == "LOAD_PRESET":
+                name = msg.get("name")
+                presets = load_presets()
+                if name and name in presets:
+                    values = clamp_preset_values(presets[name])
+                    for joint in ["j1", "j2", "z", "tool"]:
+                        if joint in values:
+                            robot_state[joint] = values[joint]
+                    
+                    # Публикация в ROS
+                    if ros_node is not None:
+                        ros_cmd = {
+                            "j1": to_ros_units("j1", robot_state["j1"]),
+                            "j2": to_ros_units("j2", robot_state["j2"]),
+                            "z":  to_ros_units("z",  robot_state["z"]),
+                        }
+                        ros_node.publish_trajectory(ros_cmd, time_sec=0.5)
+                    
+                    await websocket.send_json({
+                        "type": "PRESET_LOADED",
+                        "name": name,
+                        "values": values
+                    })
+                    print(f"📥 Preset loaded: {name}")
+
+            # 7. Запрос списка пресетов
+            elif msg_type == "LIST_PRESETS":
+                await websocket.send_json({
+                    "type": "PRESETS_LIST",
+                    "presets": load_presets()
+                })
 
             # ==================== ОТПРАВКА В РОС (с троттлингом) ====================
             # Публикуем в ROS только если прошёл мин. интервал

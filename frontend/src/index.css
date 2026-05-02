@@ -99,3 +99,19 @@ input[type="range"]::-moz-range-thumb {
     background-color: #f9f9f9;
   }
 }
+
+/* Если используешь CSS-файл */
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

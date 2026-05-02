@@ -48,6 +48,7 @@ function App() {
 
     ws.current.onmessage = (e) => {
       const data = JSON.parse(e.data);
+
       if (data.type === "STATUS") {
         setRobot(data);
         setSliders({
@@ -56,6 +57,15 @@ function App() {
           z: data.z,
           tool: data.tool,
         });
+      }
+
+      // ✅ Добавь сюда обработку пресетов:
+      if (data.type === "PRESETS_LIST") {
+        setPresets(data.presets || {});
+      }
+      if (data.type === "PRESET_LOADED") {
+        setPresetLoading(null);
+        setSliders((prev) => ({ ...prev, ...data.values }));
       }
     };
 
@@ -205,6 +215,98 @@ function App() {
   const y1 = center - L1 * Math.sin(rad1);
   const x2 = x1 + L2 * Math.cos(rad2);
   const y2 = y1 - L2 * Math.sin(rad2);
+  const [presets, setPresets] = useState({});
+  const [newPresetName, setNewPresetName] = useState("");
+  const [presetLoading, setPresetLoading] = useState(null);
+
+  // Загрузка списка пресетов при монтировании
+  useEffect(() => {
+    fetch("/api/presets")
+      .then((res) => res.json())
+      .then((data) => setPresets(data.presets || {}))
+      .catch((err) => console.error("Failed to load presets:", err));
+  }, []);
+
+  // Сохранение текущего состояния как пресет
+  const saveCurrentAsPreset = async () => {
+    if (!newPresetName.trim()) return;
+
+    try {
+      const response = await fetch("/api/presets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: newPresetName.trim(),
+          values: { j1: robot.j1, j2: robot.j2, z: robot.z, tool: robot.tool },
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setPresets((prev) => ({ ...prev, ...data.preset }));
+        setNewPresetName("");
+        // Обновляем через WebSocket для консистентности
+        send({ type: "LIST_PRESETS" });
+      }
+    } catch (err) {
+      console.error("Failed to save preset:", err);
+    }
+  };
+
+  // Загрузка пресета
+  const loadPreset = (name) => {
+    setPresetLoading(name);
+
+    fetch(`/api/presets/${name}/load`, { method: "POST" })
+      .then((res) => res.json())
+      .then((data) => {
+        // ✅ Обновляем локальный стейт, чтобы SVG и ползунки отреагировали
+        if (data.state) {
+          setRobot((prev) => ({
+            ...prev,
+            j1: data.state.j1,
+            j2: data.state.j2,
+            z: data.state.z,
+            tool: data.state.tool,
+            // x и y пересчитаются автоматически при следующем рендере
+          }));
+          setSliders((prev) => ({
+            ...prev,
+            j1: data.state.j1,
+            j2: data.state.j2,
+            z: data.state.z,
+            tool: data.state.tool,
+          }));
+        }
+        setPresetLoading(null);
+      })
+      .catch((err) => {
+        console.error("Failed to load preset:", err);
+        setPresetLoading(null);
+      });
+  };
+
+  // Удаление пресета
+  const deletePreset = async (name) => {
+    if (!confirm(`Удалить пресет "${name}"?`)) return;
+
+    try {
+      const response = await fetch(`/api/presets/${name}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        setPresets((prev) => {
+          const next = { ...prev };
+          delete next[name];
+          return next;
+        });
+        send({ type: "LIST_PRESETS" });
+      }
+    } catch (err) {
+      console.error("Failed to delete preset:", err);
+    }
+  };
 
   return (
     <div style={styles.page}>
@@ -339,6 +441,7 @@ function App() {
       </div>
 
       <div style={styles.right}>
+        {/* === БЛОК С ПОЛЗУНКАМИ — ВСТАВИТЬ ПЕРЕД ПРЕСЕТАМИ === */}
         <div style={styles.card}>
           <h3>Позвенное управление</h3>
           {["j1", "j2", "z", "tool"].map((joint) => {
@@ -394,20 +497,121 @@ function App() {
             );
           })}
         </div>
-
         <div style={styles.card}>
           <h3>Пресеты</h3>
-          <button style={styles.btnWide} onClick={() => setPreset(30, 20)}>
-            Поза A
-          </button>
-          <button style={styles.btnWide} onClick={() => setPreset(60, -30)}>
-            Поза B
-          </button>
-          <button style={styles.btnWide} onClick={() => setPreset(90, 0)}>
-            Поза C
-          </button>
-          <button style={styles.btnWide} onClick={home}>
-            Домой
+
+          {/* Форма создания нового пресета */}
+          <div style={{ display: "flex", gap: "8px", marginBottom: "12px" }}>
+            <input
+              type="text"
+              placeholder="Название пресета"
+              value={newPresetName}
+              onChange={(e) => setNewPresetName(e.target.value)}
+              onKeyPress={(e) => e.key === "Enter" && saveCurrentAsPreset()}
+              style={{
+                flex: 1,
+                padding: "8px 12px",
+                borderRadius: "8px",
+                border: "1px solid #e5e7eb",
+                fontSize: "14px",
+              }}
+            />
+            <button
+              onClick={saveCurrentAsPreset}
+              disabled={!newPresetName.trim()}
+              style={{
+                ...styles.btnWide,
+                marginBottom: 0,
+                opacity: newPresetName.trim() ? 1 : 0.6,
+                cursor: newPresetName.trim() ? "pointer" : "not-allowed",
+              }}
+            >
+              💾 Сохранить
+            </button>
+          </div>
+
+          {/* Список сохранённых пресетов */}
+          <div
+            style={{
+              maxHeight: "200px",
+              overflowY: "auto",
+              marginBottom: "12px",
+            }}
+          >
+            {Object.entries(presets).map(([name, values]) => (
+              <div
+                key={name}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "8px 12px",
+                  background: "#f9fafb",
+                  borderRadius: "8px",
+                  marginBottom: "6px",
+                }}
+              >
+                <div style={{ fontSize: "14px", fontWeight: 500 }}>
+                  {name}
+                  <div style={{ fontSize: "11px", color: "#6b7280" }}>
+                    J1:{values.j1?.toFixed(0)}° J2:{values.j2?.toFixed(0)}° Z:
+                    {values.z?.toFixed(0)}мм
+                  </div>
+                </div>
+                <div style={{ display: "flex", gap: "4px" }}>
+                  <button
+                    onClick={() => loadPreset(name)}
+                    disabled={presetLoading === name}
+                    style={{
+                      padding: "4px 10px",
+                      borderRadius: "6px",
+                      border: "none",
+                      background:
+                        presetLoading === name ? "#9ca3af" : "#3b82f6",
+                      color: "#fff",
+                      fontSize: "12px",
+                      cursor:
+                        presetLoading === name ? "not-allowed" : "pointer",
+                    }}
+                  >
+                    {presetLoading === name ? "⏳" : "▶"}
+                  </button>
+                  {!["home", "park"].includes(name) && (
+                    <button
+                      onClick={() => deletePreset(name)}
+                      style={{
+                        padding: "4px 10px",
+                        borderRadius: "6px",
+                        border: "none",
+                        background: "#ef4444",
+                        color: "#fff",
+                        fontSize: "12px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+            {Object.keys(presets).length === 0 && (
+              <div
+                style={{
+                  textAlign: "center",
+                  color: "#9ca3af",
+                  fontSize: "13px",
+                  padding: "12px",
+                }}
+              >
+                Нет сохранённых пресетов
+              </div>
+            )}
+          </div>
+
+          {/* Быстрые кнопки — можно оставить или убрать */}
+          <button style={styles.btnWide} onClick={() => loadPreset("home")}>
+            🏠 Домой
           </button>
         </div>
       </div>
@@ -492,6 +696,13 @@ const styles = {
     fontWeight: 500,
     textAlign: "center",
     border: "1px solid #fecaca",
+  },
+  // В конец объекта styles
+  scrollContainer: {
+    maxHeight: "200px",
+    overflowY: "auto",
+    scrollbarWidth: "thin",
+    scrollbarColor: "#d1d5db #f3f4f6",
   },
 };
 
