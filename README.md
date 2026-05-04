@@ -1,4 +1,5 @@
 ```markdown
+xhost +local:docker
 # 🔧 Разработка (с hot-reload)
 ENV=development docker-compose --profile dev up
 
