@@ -105,7 +105,7 @@ COPY backend/ /app/backend/
 COPY frontend/dist/ /app/backend/static/
 
 WORKDIR /app/backend
-CMD ["python", "main.py"]
+CMD ["python3", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 EXPOSE 8000
 ENTRYPOINT ["/entrypoint.sim.sh"]
